@@ -1,13 +1,18 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>MM</title>
+        <title>김민석 포트폴리오</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/png" sizes="16x16" href="bootstrap/assets/x-icon.png"/>
+        <link rel="icon" type="image/png" href="bootstrap/assets/img/xicon.png"/>
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -23,18 +28,18 @@
                 <div class="box" style="background: #FBCA48; margin-right: 1.5rem;">
                     <img class="img-profile" src="bootstrap/assets/img/picture_profile-crop.jpg">
                 </div>
-                <a class="navbar-brand" href="#page-top"><img src="bootstrap/assets/img/mmspf.png" alt="..." /></a>
+                <a class="navbar-brand" href="#page-top"><img src="bootstrap/assets/img/kim min seok.png" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#services">자기소개</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">도전결과물</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">about me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">experienced</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">skills</a></li>
+<!--                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>-->
+<!--                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>-->
                     </ul>
                 </div>
             </div>
@@ -49,20 +54,21 @@
                     <h2 class="section-heading text-uppercase">자기소개</h2>
                 </div>
                 <div class="introduce">
-                    <h6 class="text-muted">매사에 최선을 다하는 개발자 김민석 입니다.</h6>
-                    <ul>
-                        <li>안녕하세요! 0년차 백엔드 개발자 김민석입니다.</li>
-                        <li>하루하루를 최선을 다해 사는 것이 동기인 저에게</li>
-                        <li>그 하루를 웹개발로 채워 나가고 있습니다. </li>
-                        <li>1일 1커밋 운동과 그날의 공부 blog를 작성하고 있습니다.</li>
-                        <li>효율성이 높은 코드와, 언어의 기능(API)들을 공부하는 것을 추구합니다.</li>
-                    </ul>
+                    <div class="introduce_main" style="margin-bottom: 2rem;">
+                        <h6 class="text-muted">매사에 최선을 다하는 개발자 김민석 입니다.</h6>
+                            <ul>
+                                <li>안녕하세요! 0년차 백엔드 개발자 김민석입니다.</li>
+                                <li>하루하루를 최선을 다해 사는 제가 그 하루를 웹개발로 채워 나가고 있습니다.</li>
+                                <li>1일 1커밋 운동과 그날의 공부 blog를 작성하고 있습니다.</li>
+                                <li>효율성이 높은 코드와, 언어의 기능(API)들을 찾아 적용하는 것을 좋아합니다.</li>
+                            </ul>
+                    </div>
                     <hr>
                     <h6 class="text-muted">Contact Me</h6>
                     <ul>
-                        <li>E-mail : 1946735@naver.com</li>
-                        <li>Git-Hub : https://github.com/1946735</li>
-                        <li>T-Story : https://timethrough.tistory.com</li>
+                        <li id="url">E-mail : 1946735@naver.com</li>
+                        <li>Git-Hub : <a href="https://github.com/1946735">https://github.com/1946735</a></li>
+                        <li>T-Story : <a href="https://timethrough.tistory.com">https://timethrough.tistory.com</a></li>
                     </ul>
                     <hr>
                 </div>
@@ -72,25 +78,25 @@
                     <div class="col-12 col-md-4">
                         <h6 class="text-muted">Backend</h6>
                         <ul>
-                            <li>JAVA</li>
-                            <li>The Grapes of Wrath</li>
-                            <li>Ulysses</li>
+                            <li>Java</li>
+                            <li>Spring/Mybatis,Springboot/Gradle : </li>
+                            <li>GitHub</li>
                         </ul>
                     </div>
                     <div class="col-12 col-md-4">
                         <h6 class="text-muted">DevOps</h6>
                         <ul>
-                            <li>To Kill a Mockingbird</li>
-                            <li>1984</li>
-                            <li>Pride and Prejudice</li>
+                            <li>MySQL</li>
+                            <li>Oracle</li>
+                            <li>Tomcat</li>
                         </ul>
                     </div>
                     <div class="col-12 col-md-4">
                         <h6 class="text-muted">Frontend</h6>
                         <ul>
-                            <li>To Kill a Mockingbird</li>
-                            <li>1984</li>
-                            <li>Pride and Prejudice</li>
+                            <li>JavaScript(Ajax)</li>
+                            <li>JQuery</li>
+                            <li>HTML, CSS</li>
                         </ul>
                     </div>
                 </div>
@@ -101,8 +107,7 @@
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">도전결과물</h2>
-                    <h3 class="section-subheading text-muted">제가 직접 구상하고 구현해낸 것입니다.</h3>
+                    <h2 class="section-heading text-uppercase">Experienced</h2>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-sm-6 mb-4">
@@ -115,8 +120,8 @@
                                 <img class="img-fluid" src="bootstrap/assets/img/portfolio/brick-out.png" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Threads</div>
-                                <div class="portfolio-caption-subheading text-muted">Illustration</div>
+                                <div class="portfolio-caption-heading">벽돌깨기 게임</div>
+                                <div class="portfolio-caption-subheading text-muted">2021.12.02.~2021.12.04.</div>
                             </div>
                         </div>
                     </div>
@@ -127,79 +132,80 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="bootstrap/assets/img/portfolio/federico_main.png" alt="..." />
+                                       <img class="img-fluid" src="bootstrap/assets/img/portfolio/federico_main.png" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Explore</div>
-                                <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
+                                <div class="portfolio-caption-heading">프랜차이즈 통합관리 시스템</div>
+                                <div class="portfolio-caption-subheading">(Federico Pizza)</div>
+                                <div class="portfolio-caption-subheading text-muted">2021.12.27.~2022.02.11.</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- About-->
-        <section class="page-section" id="about">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">About</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-                <ul class="timeline">
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="bootstrap/assets/img/about/1.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>2009-2011</h4>
-                                <h4 class="subheading">Our Humble Beginnings</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="bootstrap/assets/img/about/2.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>March 2011</h4>
-                                <h4 class="subheading">An Agency is Born</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="bootstrap/assets/img/about/3.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>December 2015</h4>
-                                <h4 class="subheading">Transition to Full Service</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="bootstrap/assets/img/about/4.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>July 2020</h4>
-                                <h4 class="subheading">Phase Two Expansion</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <h4>
-                                Be Part
-                                <br />
-                                Of Our
-                                <br />
-                                Story!
-                            </h4>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
+<!--        &lt;!&ndash; About&ndash;&gt;-->
+<!--        <section class="page-section" id="about">-->
+<!--            <div class="container">-->
+<!--                <div class="text-center">-->
+<!--                    <h2 class="section-heading text-uppercase">About</h2>-->
+<!--                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>-->
+<!--                </div>-->
+<!--                <ul class="timeline">-->
+<!--                    <li>-->
+<!--                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="bootstrap/assets/img/about/1.jpg" alt="..." /></div>-->
+<!--                        <div class="timeline-panel">-->
+<!--                            <div class="timeline-heading">-->
+<!--                                <h4>2009-2011</h4>-->
+<!--                                <h4 class="subheading">Our Humble Beginnings</h4>-->
+<!--                            </div>-->
+<!--                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li class="timeline-inverted">-->
+<!--                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="bootstrap/assets/img/about/2.jpg" alt="..." /></div>-->
+<!--                        <div class="timeline-panel">-->
+<!--                            <div class="timeline-heading">-->
+<!--                                <h4>March 2011</h4>-->
+<!--                                <h4 class="subheading">An Agency is Born</h4>-->
+<!--                            </div>-->
+<!--                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="bootstrap/assets/img/about/3.jpg" alt="..." /></div>-->
+<!--                        <div class="timeline-panel">-->
+<!--                            <div class="timeline-heading">-->
+<!--                                <h4>December 2015</h4>-->
+<!--                                <h4 class="subheading">Transition to Full Service</h4>-->
+<!--                            </div>-->
+<!--                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li class="timeline-inverted">-->
+<!--                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="bootstrap/assets/img/about/4.jpg" alt="..." /></div>-->
+<!--                        <div class="timeline-panel">-->
+<!--                            <div class="timeline-heading">-->
+<!--                                <h4>July 2020</h4>-->
+<!--                                <h4 class="subheading">Phase Two Expansion</h4>-->
+<!--                            </div>-->
+<!--                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li class="timeline-inverted">-->
+<!--                        <div class="timeline-image">-->
+<!--                            <h4>-->
+<!--                                Be Part-->
+<!--                                <br />-->
+<!--                                Of Our-->
+<!--                                <br />-->
+<!--                                Story!-->
+<!--                            </h4>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </section>-->
         <!-- Team-->
 <!--        <section class="page-section bg-light" id="team">-->
 <!--            <div class="container">-->
@@ -245,111 +251,104 @@
 <!--            </div>-->
 <!--        </section>-->
         <!-- Clients-->
-        <div class="py-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-2 col-sm-4 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="bootstrap/assets/img/logos/ajaxLogo.png" alt="..." /></a>
-                    </div>
-                    <div class="col-md-2 col-sm-4 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="bootstrap/assets/img/logos/bootstrapLogo.png" alt="..." /></a>
-                    </div>
-                    <div class="col-md-2 col-sm-4 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="bootstrap/assets/img/logos/htmlcssLogo.png" alt="..." /></a>
-                    </div>
-                    <div class="col-md-2 col-sm-4 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="bootstrap/assets/img/logos/jQueryLogo.png" alt="..." /></a>
-                    </div>
-                    <div class="col-md-2 col-sm-4 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="bootstrap/assets/img/logos/mybatisLogo.png" alt="..." /></a>
-                    </div>
-                    <div class="col-md-2 col-sm-4 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="bootstrap/assets/img/logos/mysqlLogo.png" alt="..." /></a>
-                    </div>
-                    <div class="col-md-2 col-sm-4 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="bootstrap/assets/img/logos/OracleLogo.png" alt="..." /></a>
+        <section class="page-section" id="about">
+            <div class="py-5">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-2 col-sm-4 my-3">
+                            <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="bootstrap/assets/img/logos/ajaxLogo.png" alt="..." /></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 my-3">
+                            <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="bootstrap/assets/img/logos/bootstrapLogo.png" alt="..." /></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 my-3">
+                            <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="bootstrap/assets/img/logos/htmlcssLogo.png" alt="..." /></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 my-3">
+                            <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="bootstrap/assets/img/logos/jQueryLogo.png" alt="..." /></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 my-3">
+                            <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="bootstrap/assets/img/logos/mybatisLogo.png" alt="..." /></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 my-3">
+                            <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="bootstrap/assets/img/logos/mysqlLogo.png" alt="..." /></a>
+                        </div>
+                        <div class="col-md-2 col-sm-4 my-3">
+                            <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="bootstrap/assets/img/logos/OracleLogo.png" alt="..." /></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- Contact-->
-        <section class="page-section" id="contact">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact Me</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- * * SB Forms Contact Form * *-->
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- This form is pre-integrated with SB Forms.-->
-                <!-- To make this form functional, sign up at-->
-                <!-- https://startbootstrap.com/solution/contact-forms-->
-                <!-- to get an API token!-->
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <!-- Name input-->
-                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                            </div>
-                            <div class="form-group">
-                                <!-- Email address input-->
-                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <!-- Phone number input-->
-                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0">
-                                <!-- Message input-->
-                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Submit success message-->
-                    <!---->
-                    <!-- This is what your users will see when the form-->
-                    <!-- has successfully submitted-->
-                    <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center text-white mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                        </div>
-                    </div>
-                    <!-- Submit error message-->
-                    <!---->
-                    <!-- This is what your users will see when there is-->
-                    <!-- an error submitting the form-->
-                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                    <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
-                </form>
             </div>
         </section>
+        <!-- Contact-->
+<!--        <section class="page-section" id="contact">-->
+<!--            <div class="container">-->
+<!--                <div class="text-center">-->
+<!--                    <h2 class="section-heading text-uppercase">Contact Me</h2>-->
+<!--                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; * * * * * * * * * * * * * * *&ndash;&gt;-->
+<!--                &lt;!&ndash; * * SB Forms Contact Form * *&ndash;&gt;-->
+<!--                &lt;!&ndash; * * * * * * * * * * * * * * *&ndash;&gt;-->
+<!--                &lt;!&ndash; This form is pre-integrated with SB Forms.&ndash;&gt;-->
+<!--                &lt;!&ndash; To make this form functional, sign up at&ndash;&gt;-->
+<!--                &lt;!&ndash; https://startbootstrap.com/solution/contact-forms&ndash;&gt;-->
+<!--                &lt;!&ndash; to get an API token!&ndash;&gt;-->
+<!--                <form id="contactForm" data-sb-form-api-token="API_TOKEN">-->
+<!--                    <div class="row align-items-stretch mb-5">-->
+<!--                        <div class="col-md-6">-->
+<!--                            <div class="form-group">-->
+<!--                                &lt;!&ndash; Name input&ndash;&gt;-->
+<!--                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />-->
+<!--                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>-->
+<!--                            </div>-->
+<!--                            <div class="form-group">-->
+<!--                                &lt;!&ndash; Email address input&ndash;&gt;-->
+<!--                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />-->
+<!--                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>-->
+<!--                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>-->
+<!--                            </div>-->
+<!--                            <div class="form-group mb-md-0">-->
+<!--                                &lt;!&ndash; Phone number input&ndash;&gt;-->
+<!--                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />-->
+<!--                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-md-6">-->
+<!--                            <div class="form-group form-group-textarea mb-md-0">-->
+<!--                                &lt;!&ndash; Message input&ndash;&gt;-->
+<!--                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>-->
+<!--                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; Submit success message&ndash;&gt;-->
+<!--                    &lt;!&ndash;&ndash;&gt;-->
+<!--                    &lt;!&ndash; This is what your users will see when the form&ndash;&gt;-->
+<!--                    &lt;!&ndash; has successfully submitted&ndash;&gt;-->
+<!--                    <div class="d-none" id="submitSuccessMessage">-->
+<!--                        <div class="text-center text-white mb-3">-->
+<!--                            <div class="fw-bolder">Form submission successful!</div>-->
+<!--                            To activate this form, sign up at-->
+<!--                            <br />-->
+<!--                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; Submit error message&ndash;&gt;-->
+<!--                    &lt;!&ndash;&ndash;&gt;-->
+<!--                    &lt;!&ndash; This is what your users will see when there is&ndash;&gt;-->
+<!--                    &lt;!&ndash; an error submitting the form&ndash;&gt;-->
+<!--                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>-->
+<!--                    &lt;!&ndash; Submit Button&ndash;&gt;-->
+<!--                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </section>-->
         <!-- Footer-->
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2021</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <div class="col-lg-4 text-lg-end">
-                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
-                    </div>
+                    <div class="col-lg-4 text-lg-start">Copyright © KMS Portfolio all right reserved</div>
                 </div>
             </div>
         </footer>
@@ -358,24 +357,32 @@
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="bootstrap/assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal">
+                        <img src="bootstrap/assets/img/close-icon.svg" alt="Close modal" />
+                    </div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="bootstrap/assets/img/portfolio/1.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
+                                    <h2 class="text-uppercase">Brick-out</h2>
+                                    <p class="item-intro text-muted">공으로 벽돌을 깨는 게임입니다.</p>
+                                                <img class="img-fluid d-block mx-auto" src="bootstrap/assets/img/portfolio/brick-out_modal2.gif"/>
+                                    <ul class="list-inline" style="text-align: left">
                                         <li>
-                                            <strong>Client:</strong>
-                                            Threads
+                                            <strong>주요기능 : </strong>벽돌깨기 게임, 공이 벽돌에 부딪히면 벽돌이 없어지고 점수가 올라감
                                         </li>
                                         <li>
-                                            <strong>Category:</strong>
-                                            Illustration
+                                            <strong>Frontend : </strong>JavaScript
+                                        </li>
+                                        <hr>
+                                        <li>
+                                            <strong></strong>
+                                            학원에서 JavaScript를 배울 때 이벤트리스너 및 function()을 익히고, <br>코딩과 친해지기 위해 많은 노력을 했었던 시도 입니다.
+                                        </li>
+                                        <li>
+                                            <strong>공부됐던 부분 :</strong>
+                                            변수정의 범위, 이벤트리스너(키보드, 마우스를 이용해 Paddle을 움직임),<br>좌표값으로 공을 관리하는 부분, 벽돌이 깨지는 조건
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -399,18 +406,40 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="bootstrap/assets/img/portfolio/2.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
+                                    <h2 class="text-uppercase">WEB 통합관리시스템</h2>
+                                    <p class="item-intro text-muted"></p>
+                                        <div class="slider" style="width: 60rem;height: auto;">
+                                            <div><img class="img-fluid d-block mx-auto" src="bootstrap/assets/img/portfolio/federico_main_inmodal.png" alt="..." /></div>
+                                            <div><img class="img-fluid d-block mx-auto" src="bootstrap/assets/img/portfolio/federico_pizza.png" alt="..." /></div>
+                                            <div><img class="img-fluid d-block mx-auto" src="bootstrap/assets/img/portfolio/federico_fcsearch.png" alt="..." /></div>
+                                            <div><img class="img-fluid d-block mx-auto" src="bootstrap/assets/img/portfolio/federico_join.png" alt="..." /></div>
+                                            <div><img class="img-fluid d-block mx-auto" src="bootstrap/assets/img/portfolio/federico_login.png" alt="..." /></div>
+                                        </div>
+
+                                    <div style="text-align: left">
+                                    <ul>
                                         <li>
-                                            <strong>Client:</strong>
-                                            Explore
+                                            <strong>주요기능 : </strong>회원가입,로그인(Session),게시판,매출 통계
                                         </li>
                                         <li>
-                                            <strong>Category:</strong>
-                                            Graphic Design
+                                            <strong>Backend : </strong>Java,Spring,Mybatis,Oracle
+                                        </li>
+                                        <li>
+                                            <strong>Frontend : </strong>JavaScript, JQuery, Ajax, Bootstrap,Css3
+                                        </li>
+                                        <hr>
+                                        <li>유효성검사를 포함한 (고객,가맹점,본사)회원가입 기능</li>
+                                        <li>Session을 통한 login</li>
+                                        <li>Ajax를 사용한 Data Load</li>
+                                        <li>JsonView를 사용한 JSON 객체방식 Data Transform</li>
+                                        <li>Mybatis를 활용한 Sql문 입력</li>
+                                    </ul>
+                                    </div>
+                                    <ul class="list-inline" style="text-align: left">
+                                        <li>
+                                            <strong>소개:</strong>
+                                            고객(주문) - 가맹점 - 본사에서 주문즉시 사용재료와 재고, 매출관리가 이루어지며 본사에서<br>
+                                            모니터링이 가능한 통합관리시스템입니다.
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -573,5 +602,18 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script>
+            $( document ).ready( function() {
+                $( '.slider' ).slick( {
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    arrows : true,
+                    dotsClass : "slick-dots",
+                    prevArrow : "<button type='button' class='slick-prev'>Previous</button>", // 이전 화살표 모양 설정
+                    nextArrow : "<button type='button' class='slick-next'>Next</button>"
+                } );
+            } );
+        </script>
+
     </body>
 </html>

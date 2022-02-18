@@ -10,6 +10,15 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+.slider {
+  width: 1280px;
+  margin: 0px auto;
+}
+.slick-prev:before, .slick-next:before {
+  color: #444444;
+}
+
 .box {
   width: 70px;
   height: 70px;
